@@ -1,0 +1,44 @@
+@use '../../colors' as *;
+
+.multi-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vh;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 70vw;
+    height: 70vh;
+
+    @media (max-width: 768px) {
+      width: 90vw;
+    }
+
+    box-shadow: $box-shadow-default;
+    padding: 42px;
+    background-color: #f9f9f9;
+    color: $black;
+    border-radius: 24px;
+
+    &__step-title-wrapper {
+      display: flex;
+      align-items: center;
+      flex: 1;
+
+      span {
+        font-size: 32px;
+        font-weight: 600;
+        color: $secondary-blue;
+      }
+    }
+
+    &__step-content-wrapper {
+      flex: 8;
+      overflow-y: hidden;
+    }
+  }
+}

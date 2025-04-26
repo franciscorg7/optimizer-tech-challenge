@@ -1,0 +1,62 @@
+@use '../../colors.scss' as *;
+
+.step-navigation {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+  padding: 16px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  &__button {
+    background-color: $primary-blue;
+    color: $white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: $gray-dark;
+      cursor: default;
+
+      &:hover {
+        background-color: $gray-dark;
+      }
+    }
+
+    &:hover {
+      background-color: $secondary-blue;
+    }
+  }
+
+  &__button--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__indicator {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    color: $primary-blue;
+  }
+
+  &__submit {
+    background-color: $accent-color;
+    color: $white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+}
